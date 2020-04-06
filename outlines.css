@@ -22,8 +22,8 @@ main::before {
 main,
 header,
 footer {
-  background-color: #f3faff;
-  border: 2px solid #7fc1ff;
+  background-color: #f00;
+  border: 2px solid #f00;
 }
 
 nav,
