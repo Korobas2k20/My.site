@@ -1,15 +1,21 @@
 <!DOCTYPE html>
 <html lang="ru">
+
+
+<!--Моя шапка сайта-->
   <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,700|Old+Standard+TT&display=swap&subset=cyrillic" rel="stylesheet">
     <title>Портфолио начинающего верстальщика</title>
   </head>
-
+  <!--Закрытие шапки сайта-->
+  
+  
+  <!--Начало тела-->
   <body>
     <header class="page-header">
-    	
+
     </header>
 
     <section class="hero-image">
@@ -19,6 +25,8 @@
   </div>
     </section>
 
+
+    <!--Основная информация про меня-->
     <section class="intro">
       <h2 class="subheading">Давайте познакомимся!</h2>
       <figure class="user-image">
@@ -35,7 +43,10 @@
       </b></ul>
       </p>
     </section>
+<!--Закрытие информации про меня-->
 
+
+<!-- Показ того моих работ-->
     <section class="portfolio">
       <h2 class="subheading">Мои работы</h2>
  <figure class="project-image">
@@ -44,18 +55,37 @@
       <h3>Сайт инструктора Кекса</h3>
       <p>Небольшая страничка о школе для начинающих.</p>
 <a class="button" href="source/project/index.html">Открыть страницу</a>
-      <!-- <h3>Блог начинающего верстальщика</h3>
+<!--Закрытие показа с кнопкой на пример-->
+     
+<!-- <h3>Блог начинающего верстальщика</h3>
       <p>Статический блог про обучение HTML и CSS.</p>
       <p><b>В процессе производства...</b></p> -->
     </section>
-
+<!--Низ сайта-->
     <footer class="page-footer">
       Мои контакты:
       <a class="footer-email" href="mailto:pkakasein@gmail.com">pkakasein@gmail.com</a>
       <a class="footer-phone" href="tel:+79821369810">+79821369810</a>
-      <a>Выключить музыку:    <audio autoplay controls loop>
-        <source src="audio/vivaldi-vremena-goda-vesna-allegro.mp3" type="audio/mp3">
+      <a>Выключить музыку:    <audio id="player" autoplay controls>
       </audio></a>
     </footer>
+    <!--Закрытие низа-->
   </body>
+  <!--Закрылось тело-->
 </html>
+
+
+<!-- Начало скрипта, который производит каждую песню по очереди. -->
+<script>
+  var tracks = ['audio/track1.mp3', 'audio/track2.mp3', 'audio/Antonio Vivaldi - Времена года Лето Гроза.mp3', 'audio/Antonio Vivaldi - Зима.mp3'];
+var player = document.getElementById('player');
+var current = 0;
+player.src = tracks[0];
+player.onended = function() {
+  current++;
+  if (current >= tracks.length) current = 0;
+  player.src = tracks[current];
+  player.play();
+}
+</script>
+<!--Конец скрипта-->
