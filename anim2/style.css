@@ -31,6 +31,7 @@ section {
     color: rgba(255, 255, 255, .1);
     background-image: url(source/abstract.jpg);
     -webkit-background-clip: text;
+    animation: hi 16s linear infinite;
 }
 
 .text{
@@ -40,6 +41,16 @@ section {
     text-align: center;
     margin: 0;
     padding: 0;
+
+}
+
+@keyframes hi{
+    0%{
+        background-position: left 0px top 10px;
+    }
+    40%{
+        background-position: left 800px top 10px;
+    }
 }
 
 .mass{
